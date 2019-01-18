@@ -1,0 +1,15 @@
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+
+		int a3=4/0;
+		System.out.println(a3);
+		
+		
+		
+		
+
+	}
+
+}
