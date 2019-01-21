@@ -1,0 +1,13 @@
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		
+	char[] c={'X','Y','Z'};
+	Ststem.out.println(c[0]);
+
+
+	}
+
+}
+
