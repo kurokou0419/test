@@ -1,0 +1,14 @@
+package jp.co.internous.action;
+
+import javax.sound.midi.Synthesizer;
+
+public class Human {
+
+	public static void main(String[]args){
+
+
+		HumanName abc=new HumanName();
+		System.out.println(abc.getName());
+	}
+
+}
