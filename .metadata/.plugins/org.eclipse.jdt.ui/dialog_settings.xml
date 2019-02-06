@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\testuser\Desktop" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="C:\Users\testuser\Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="1" key="layout"/>
 		<item value="true" key="group_libraries"/>
@@ -13,7 +13,7 @@
 		<item value="true" key="create_unimplemented"/>
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item value="7" key="index"/>
+		<item value="2" key="index"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
@@ -28,7 +28,7 @@
 	</section>
 	<section name="completion_proposal_size">
 		<item value="286" key="size.y"/>
-		<item value="76" key="size.x"/>
+		<item value="318" key="size.x"/>
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
