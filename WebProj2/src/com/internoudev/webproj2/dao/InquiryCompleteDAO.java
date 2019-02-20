@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import com.internousdev.webproj2.util.DBConnector;
 
 public class InquiryCompleteDAO {
-	public int isert(String name,String qtype,String body){
+	public int insert(String name,String qtype,String body){
 		int ret=0;
 		DBConnector db=new DBConnector();
 		Connection con=db.getConnection();
