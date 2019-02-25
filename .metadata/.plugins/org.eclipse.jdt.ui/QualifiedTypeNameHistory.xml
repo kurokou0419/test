@@ -6,4 +6,7 @@
 <fullyQualifiedTypeName name="com.internoudev.webproj2.dao.HelloStrutsDAO"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.internoudev.webproj2.dao.TestDAO"/>
+<fullyQualifiedTypeName name="com.internoudev.webproj4.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.internoudev.webproj4.dto.HelloStrutsDTO"/>
+<fullyQualifiedTypeName name="com.internoudev.webproj4.dao.HelloStrutsDAO"/>
 </qualifiedTypeNameHistroy>
