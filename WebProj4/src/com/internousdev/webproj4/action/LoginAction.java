@@ -12,7 +12,7 @@ public class LoginAction extends ActionSupport {
 	private String username;
 	private String password;
 
-	public List<LoginDTO> LoginDTOList=new ArrayList<LoginDTO>();
+	private List<LoginDTO> LoginDTOList=new ArrayList<LoginDTO>();
 
 	public String execute(){
 		String ret=ERROR;
@@ -22,7 +22,7 @@ public class LoginAction extends ActionSupport {
 
 		LoginDTOList=dao.select(username, password);
 
-		if(this.username.equals(LoginDTOList.get(0))&& this.password.equals(LoginDTOList.get(0).getPassword())){
+		if(this.username.equals(LoginDTOList.get(0).getUsername()) && this.password.equals(LoginDTOList.get(0).getPassword())){
 			ret=SUCCESS;
 
 		}else{
@@ -42,6 +42,13 @@ public class LoginAction extends ActionSupport {
 
 	public void setPassword(String password){
 		this.password=password;
+	}
+	public List<LoginDTO>getLoginDTOList(){
+		return LoginDTOList;
+	}
+
+	public void setLoginDTOList(List<LoginDTO>loginDTOList){
+		LoginDTOList=loginDTOList;
 	}
 
 }

@@ -14,7 +14,7 @@ public class LoginDAO {
 	public String username;
 	public String password;
 
-	public List<LoginDTO> loginDTOList=new ArrayList<LoginDTO>();
+	public List<LoginDTO>loginDTOList=new ArrayList<LoginDTO>();
 
 	public List<LoginDTO>select(String username,String password){
 		DBConnector db=new DBConnector();
@@ -23,6 +23,8 @@ public class LoginDAO {
 		String sql="select * from users where user_name=? and password=?";
 		try{
 			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setString(1, username);
+			ps.setString(2, password);
 			ResultSet rs=ps.executeQuery();
 
 			while(rs.next()){
@@ -39,6 +41,7 @@ public class LoginDAO {
 				dto.setPassword("該当なし");
 				loginDTOList.add(dto);
 			}
+
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
