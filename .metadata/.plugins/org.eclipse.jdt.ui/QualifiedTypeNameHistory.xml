@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="com.internoudev.webproj4.util.DBConnector"/>
 <fullyQualifiedTypeName name="com.internoudev.webproj4.dto.HelloStrutsDTO"/>
 <fullyQualifiedTypeName name="com.internoudev.webproj4.dao.HelloStrutsDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj5.dto.InquiryDTO"/>
 </qualifiedTypeNameHistroy>
