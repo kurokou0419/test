@@ -10,7 +10,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>buyItem画面</title>
+<title>MyPage画面</title>
 
 <style type="text/css">
 /*=======TAG LAYOUT=======*/
@@ -61,63 +61,53 @@ clear:both;
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>BuyItem</p>
+			<p>MyPage</p>
 		</div>
 		<div>
-		<s:form action="BuyItemAction">
+			<s:if test="session.message==''">
+				<h3>ご購入情報以下になります。</h3>
 			<table>
 				<tr>
-					<td>
-						<span>商品名</span>
-					</td>
+						<td>商品名</td>
 					<td>
 						<s:property value="session.buyItem_name"/>
 					</td>
 				</tr>
 				<tr>
+					<td>値段</td>
 					<td>
-						<span>値段</span>
-					</td>
-					<td>
-					<s:property value="session.buyItem_price"/>
+					<s:property value="session.total_price"/>
 						<span>円</span>
 					</td>
 				</tr>
 				<tr>
+					<td>購入個数</td>
 					<td>
-						<span>在庫名</span>
-					</td>
-					<td>
-						<select name="stock">
-						<option value="1" selected="selected">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-						</select>
+					<s:property value="session.total_count"/>
+					<span>個</span>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<span>支払い方法</span>
-					</td>
-					<td>
-						<input type="radio" name="pay" value="1" checked="checked">現金払い
-						<input type="radio" name="pay" value="2">クレジットカード
-					</td>
+					<td>支払い方法</td>
+					<td><s:property value="session.total_payment"/></td>
 				</tr>
-				<tr>
-					<td>
-						<s:submit value="購入"/>
-					</td>
-				</tr>
-			</table>
-		</s:form>
-			<div>
-				<span>全画面に戻る場合は</span>
-				<a href='<s:url action="HomeAction"/>'>こちら</a>
+				</table>
+				<s:form action="MyPageAction">
+					<input type="hidden" name="deleteFlg" value="1">
+					<s:submit value="削除" method="delete"/>
+				</s:form>
+				</s:if>
+				<s:if test="session.message !=null">
+					<h3><s:property value="session.message"/></h3>
+				</s:if>
+					<div>
+						<br>
+						<span>前画面に戻る場合は</span>
+						<a href='<s:url action="HomeAction"/>'>ログアウト</a>
+						<span>をお願いします</span>
+					</div>
+
 			</div>
-		</div>
 	</div>
 	<div id="footer">
 		<div id="pr">
